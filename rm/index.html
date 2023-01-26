@@ -3,6 +3,7 @@
 
 
 
+
 <!DOCTYPE html>
 <html lang="pt-BR" dir="ltr">
 <head>
@@ -964,6 +965,23 @@ EDUZZ
 
 </script>
 
+<script>
+(function() {
+     const utmParamQueryString = new URLSearchParams(window.location.search);
+     if (utmParamQueryString.toString()) {
+          var navLinks = document.querySelectorAll('a');
+          navLinks.forEach(function(item) {
+               if (item.href.indexOf('checkout.mycheckout.com.br') !== -1) {
+                    if (item.href.indexOf('?') === -1) {
+                         item.href += '?' + utmParamQueryString.toString();
+                    } else {
+                         item.href += '&' + utmParamQueryString.toString();
+                    }
+               }
+          });
+     }
+})();
+</script>
 
 </body>
 </html>
