@@ -3,6 +3,7 @@
 
 
 
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -899,7 +900,7 @@ animation: pulse 2s infinite;
 <div class="elementor-widget-container">
 <script>
 
-    let prefix = ["https://seguro.respeitoamor.com/"];
+    let prefix = ["https://pay.kiwify.com.br"];
 
  
 
@@ -921,9 +922,7 @@ function getParams() {
 
             m = r.searchParams.get("utm_term"),
 
-            c = r.searchParams.get("utm_content"),
-            
-            f = r.searchParams.get("fbclid"); - 1 !== e.indexOf("?") && (t = `&sck=${a}|${n}|${o}|${m}|${c}|${f}`), console.log(t)
+            c = r.searchParams.get("utm_content"); - 1 !== e.indexOf("?") && (t = `&sck=${a}|${n}|${o}|${m}|${c}`), console.log(t)
 
     }
 
@@ -1103,48 +1102,6 @@ var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false
   src="https://www.facebook.com/tr?id=963509911311666&ev=PageView&noscript=1"
 /></noscript>
 <!-- End Meta Pixel Code -->
-
-<script>
-
-    let prefix = ["https://pay.kiwify.com.br"];
-
- 
-
-function getParams() {
-
-    let t = "",
-
-        e = window.top.location.href,
-
-        r = new URL(e);
-
-    if (null != r) {
-
-        let a = r.searchParams.get("utm_source"),
-
-            n = r.searchParams.get("utm_medium"),
-
-            o = r.searchParams.get("utm_campaign"),
-
-            m = r.searchParams.get("utm_term"),
-
-            c = r.searchParams.get("utm_content"); - 1 !== e.indexOf("?") && (t = `&sck=${a}|${n}|${o}|${m}|${c}`), console.log(t)
-
-    }
-
-    return t
-
-}! function() {
-
-    var t = new URLSearchParams(window.location.search);
-
-    t.toString() && document.querySelectorAll("a").forEach(function(e) {
-
-        for (let r = 0; r < prefix.length; r++) - 1 !== e.href.indexOf(prefix[r]) && (-1 === e.href.indexOf("?") ? e.href += "?" + t.toString() + getParams() : e.href += "&" + t.toString() + getParams())
-
-    })
-
-}(); </script>
 
 </body>
 </html>
